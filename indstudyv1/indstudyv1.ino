@@ -98,6 +98,7 @@ void loop() {
                 Serial.println(incomingByte);
         }
 
+
         switch (incomingByte) {
     case 'a':
       //vibrate motor 1
@@ -158,6 +159,7 @@ void loop() {
       analogWrite(9, 0);
       analogWrite(6, 100);
       delay(250);
+      analogWrite(6,0);
       analogWrite(5, 100);
       delay(250);
       analogWrite(5,0);
@@ -352,7 +354,7 @@ void loop() {
   case 'u':
     speedup(6);
     break;
-    
+
   case'z':
     clearAllMotors();
     break;
